@@ -3,5 +3,9 @@
   
   <application>jack-js</application>
   <version>1</version>
+  <static-files>
+    <include path="/static/**"/>
+  </static-files>
+
   
 </appengine-web-app>

@@ -64,6 +64,9 @@ JAKE.task("assemble", function() {
     
     // self
     leanInstall(selfPkg, FILE.join(BUILD, "war", "WEB-INF"));
+    var staticPath = FILE.join(BUILD, "war", "WEB-INF", "static");
+    if (FILE.exists(staticPath))
+        FILE.move(staticPath, FILE.join(BUILD, "war", "static"));
     
     var libDest = FILE.join(BUILD, "war", "WEB-INF", "lib");
     FILE.mkdirs(libDest);
